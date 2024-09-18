@@ -17,3 +17,14 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+  let userChoice = prompt("Enter your choice from rock, paper, scissors:");
+  if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors") {
+    return userChoice;
+  } else {
+    alert("Please enter only one of these: rock, paper, scissors");
+  }
+}
+
+console.log(getHumanChoice());
