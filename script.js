@@ -20,14 +20,11 @@ function getHumanChoice() {
   let userChoice = prompt("Enter your choice from rock, paper, scissors:")
     .toLowerCase()
     .trim(); // .trim() to remove any leading or trailing spaces
-  // if (
-  //   userChoice == "rock" ||
-  //   userChoice == "paper" ||
-  //   userChoice == "scissors"
-  // )
-
-  // To ensure the user choice matches exactly with the options
-  if (["rock", "paper", "scissors"].includes(userChoice)) {
+  if (
+    userChoice == "rock" ||
+    userChoice == "paper" ||
+    userChoice == "scissors"
+  ) {
     return userChoice;
   } else {
     alert("Please enter only one of these: rock, paper, scissors");
