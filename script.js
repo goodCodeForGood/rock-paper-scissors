@@ -33,7 +33,8 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
-  for (i = 0; i < 5; i++) {
+  for (i = 1; i <= 5; i++) {
+    console.log(`Round ${i}`);
     let computerSelection = getComputerChoice();
     console.log(computerSelection);
     let humanSelection = getHumanChoice();
@@ -41,6 +42,7 @@ function playGame() {
     playRound(humanSelection, computerSelection);
   }
 
+  console.log("Final result:");
   if (humanScore > computerScore) {
     console.log("Congrats! You won the game!");
   } else if (computerScore > humanScore) {
@@ -75,11 +77,4 @@ function playGame() {
   }
 }
 
-/*
-human:         rock             paper           scissors
-comp:        r  p   s         r    p   s       r    p   s
-
-comp:         rock             paper           scissors
-human:      r  p   s         r    p   s       r    p   s
-
-*/
+playGame();
